@@ -1,12 +1,12 @@
-import { composeMiddlewares } from './middlewares/compose-middlewares';
-import { withAnalyticsCookies } from './middlewares/with-analytics-cookies';
-import { withAuth } from './middlewares/with-auth';
-import { withChannelId } from './middlewares/with-channel-id';
-import { withIntl } from './middlewares/with-intl';
-import { withMakeswift } from './middlewares/with-makeswift';
-import { withRoutes } from './middlewares/with-routes';
+import { composeProxies } from './proxies/compose-proxies';
+import { withAnalyticsCookies } from './proxies/with-analytics-cookies';
+import { withAuth } from './proxies/with-auth';
+import { withChannelId } from './proxies/with-channel-id';
+import { withIntl } from './proxies/with-intl';
+import { withMakeswift } from './proxies/with-makeswift';
+import { withRoutes } from './proxies/with-routes';
 
-export const middleware = composeMiddlewares(
+export const proxy = composeProxies(
   withAuth,
   withMakeswift,
   withIntl,
