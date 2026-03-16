@@ -13,6 +13,7 @@ import {
   REGISTER_CUSTOMER_FORM_LAYOUT,
   transformFieldsToLayout,
 } from '~/data-transformers/form-field-transformer/utils';
+import { getRecaptchaSiteKey } from '~/lib/recaptcha';
 import { exists } from '~/lib/utils';
 
 import { ADDRESS_FIELDS_NAME_PREFIX, CUSTOMER_FIELDS_NAME_PREFIX } from './_actions/prefixes';
@@ -62,6 +63,8 @@ export default async function Register({ params }: Props) {
 
   const { addressFields, customerFields, countries, passwordComplexitySettings } =
     registerCustomerData;
+
+  const recaptchaSiteKey = await getRecaptchaSiteKey();
 
   const fields = transformFieldsToLayout(
     [
@@ -154,6 +157,7 @@ export default async function Register({ params }: Props) {
       }}
       fields={fields}
       passwordComplexity={passwordComplexitySettings}
+      recaptchaSiteKey={recaptchaSiteKey}
       submitLabel={t('cta')}
       title={t('heading')}
     />
