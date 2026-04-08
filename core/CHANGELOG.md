@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.3
+
+### Patch Changes
+
+- [#2963](https://github.com/bigcommerce/catalyst/pull/2963) [`a8dd99e`](https://github.com/bigcommerce/catalyst/commit/a8dd99ef9a1aeab3341e14d39137085cd67f1673) Thanks [@chanceaclark](https://github.com/chanceaclark)! - Fix DynamicForm not rendering hidden field types, which caused `pageEntityId` to be `NaN` on contact form submission.
+
+- [#2959](https://github.com/bigcommerce/catalyst/pull/2959) [`4870221`](https://github.com/bigcommerce/catalyst/commit/4870221c3a5c5209b58fb6ec969b30897d08eea8) Thanks [@bc-svc-local](https://github.com/bc-svc-local)! - Update translations.
+
 ## 1.6.2
 
 ### Patch Changes
