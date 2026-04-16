@@ -14,3 +14,6 @@ import './components/site-header/register';
 import './components/site-theme/register';
 import './components/slideshow/register';
 import './components/sticky-sidebar/register';
+
+// Custom components
+import './components/custom/icon-heading-cards/register';
