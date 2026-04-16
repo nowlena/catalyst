@@ -16,6 +16,7 @@ export interface IconHeadingCardsProps {
     };
   }>;
   orientation: 'horizontal' | 'vertical';
+  colorScheme: 'light' | 'dark';
   showBorder: boolean;
 }
 
@@ -45,6 +46,7 @@ export function IconHeadingCards({
   cards,
   orientation,
   showBorder,
+  colorScheme,
   className,
 }: IconHeadingCardsProps) {
   return (
@@ -52,6 +54,10 @@ export function IconHeadingCards({
       className={clsx(
         'flex gap-4 p-4',
         { horizontal: 'flex-row', vertical: 'flex-col' }[orientation],
+        {
+          light: 'text-[var(--card-light-text,hsl(var(--foreground)))]',
+          dark: 'text-[var(--card-dark-text,hsl(var(--background)))]',
+        }[colorScheme],
         className,
       )}
     >

@@ -71,6 +71,14 @@ runtime.registerComponent(IconHeadingCards, {
       ],
       defaultValue: 'horizontal',
     }),
+    colorScheme: Select({
+      label: 'Text color scheme',
+      options: [
+        { value: 'light', label: 'Light' },
+        { value: 'dark', label: 'Dark' },
+      ],
+      defaultValue: 'light',
+    }),
     showBorder: Checkbox({ label: 'Show border', defaultValue: true }),
   },
 });
